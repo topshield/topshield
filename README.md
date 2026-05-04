@@ -1,62 +1,18 @@
-import React from "react";
+# 💫 About Me:
+Hi, I’m Shreyash — exploring coding, Data Science, data Analysist, and AI.<br><br>Focusing on:<br>Aspiring data scientist interested in AI, ML and intelligent systems.<br><br>I’m especially interested in data security and artificial intelligence, and I’m working toward becoming a data scientist.
 
-export default function Dashboard() {
-  return (
-    <div className="min-h-screen bg-black text-orange-400 p-6 font-mono">
-      {/* Header */}
-      <header className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold tracking-widest text-orange-500">
-          CODE HUB
-        </h1>
-        <div className="text-sm opacity-70">commit-to-master</div>
-      </header>
 
-      {/* Main Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Sidebar */}
-        <div className="bg-zinc-900 rounded-2xl p-4 shadow-lg border border-orange-500/20">
-          <h2 className="text-lg mb-4 text-orange-300">Navigation</h2>
-          <ul className="space-y-2 text-sm">
-            <li className="hover:text-orange-500 cursor-pointer">Repositories</li>
-            <li className="hover:text-orange-500 cursor-pointer">Commits</li>
-            <li className="hover:text-orange-500 cursor-pointer">Pull Requests</li>
-            <li className="hover:text-orange-500 cursor-pointer">Issues</li>
-          </ul>
-        </div>
+## 🌐 Socials:
+[![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:shreyashbhagat6@gmail.com) 
 
-        {/* Main Content */}
-        <div className="md:col-span-2 space-y-6">
-          {/* Repo Card */}
-          <div className="bg-zinc-900 rounded-2xl p-5 shadow-lg border border-orange-500/20">
-            <h2 className="text-xl text-orange-400 mb-2">commit-to-master</h2>
-            <p className="text-sm opacity-70">
-              A GitHub dashboard styled UI with dark orange aesthetic.
-            </p>
-          </div>
+# 💻 Tech Stack:
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white) ![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![Testing-Library](https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.shion.dev/api?username=topshield&theme=neon&hide_border=true&include_all_commits=false&count_private=false)<br/>
+![](https://streak-stats.demolab.com/?user=topshield&theme=neon&hide_border=true)<br/>
+![](https://github-readme-stats.shion.dev/api/top-langs/?username=topshield&theme=neon&hide_border=true&include_all_commits=false&count_private=false&layout=compact)
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-zinc-900 p-4 rounded-xl border border-orange-500/20">
-              <p className="text-sm">Commits</p>
-              <h3 className="text-2xl text-orange-500">128</h3>
-            </div>
-            <div className="bg-zinc-900 p-4 rounded-xl border border-orange-500/20">
-              <p className="text-sm">Repos</p>
-              <h3 className="text-2xl text-orange-500">12</h3>
-            </div>
-          </div>
+---
+[![](https://komarev.com/ghpvc/?username=topshield&icon=0&color=0)](https://visitcount.itsvg.in)
 
-          {/* Activity */}
-          <div className="bg-zinc-900 rounded-2xl p-5 border border-orange-500/20">
-            <h2 className="text-lg mb-3 text-orange-300">Recent Activity</h2>
-            <ul className="text-sm space-y-2 opacity-80">
-              <li>✔ Fixed bug in auth system</li>
-              <li>✔ Added new dashboard UI</li>
-              <li>✔ Updated README</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
