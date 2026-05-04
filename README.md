@@ -1,311 +1,62 @@
-/* ==UserStyle==
-@name 「Stylus Black Edition」
-@namespace BillyCool
-@version 1.0.1
-@description A pitch black userstyle for the Stylus extension.
-@author BillyCool
-@homepageURL https://github.com/BillyCool/UserStyles/tree/master/Stylus-Black-Edition
-@license GPL-3.0-or-later
-@preprocessor stylus
+import React from "react";
 
-@var color bg-1 "Background color" #000
-@var color text-1 "Text color" #E1E1E1
-@var color highlight "Highlight color" #FF0000
-@var range border-radius "Input/button border radius" [4, 0, 12, 1, "px"]
+export default function Dashboard() {
+  return (
+    <div className="min-h-screen bg-black text-orange-400 p-6 font-mono">
+      {/* Header */}
+      <header className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl font-bold tracking-widest text-orange-500">
+          CODE HUB
+        </h1>
+        <div className="text-sm opacity-70">commit-to-master</div>
+      </header>
 
-==/UserStyle== */
-@-moz-document regexp('^(moz|chrome)-extension://.*$') {
-    /* Variable declarations */
-    bg-2 = lightenOrDarken(bg-1);
-    text-2 = lightenOrDarken(text-1, 25%);
+      {/* Main Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Sidebar */}
+        <div className="bg-zinc-900 rounded-2xl p-4 shadow-lg border border-orange-500/20">
+          <h2 className="text-lg mb-4 text-orange-300">Navigation</h2>
+          <ul className="space-y-2 text-sm">
+            <li className="hover:text-orange-500 cursor-pointer">Repositories</li>
+            <li className="hover:text-orange-500 cursor-pointer">Commits</li>
+            <li className="hover:text-orange-500 cursor-pointer">Pull Requests</li>
+            <li className="hover:text-orange-500 cursor-pointer">Issues</li>
+          </ul>
+        </div>
 
-    /* Helper functions */
-    lightenOrDarken(color, amount = 5%) {
-        if (dark(color)) {
-            return lighten(color, amount);
-        } else {
-            return darken(color, amount);
-        }
-    }
+        {/* Main Content */}
+        <div className="md:col-span-2 space-y-6">
+          {/* Repo Card */}
+          <div className="bg-zinc-900 rounded-2xl p-5 shadow-lg border border-orange-500/20">
+            <h2 className="text-xl text-orange-400 mb-2">commit-to-master</h2>
+            <p className="text-sm opacity-70">
+              A GitHub dashboard styled UI with dark orange aesthetic.
+            </p>
+          </div>
 
-    getForegroundColor(color) {
-        if (dark(color)) {
-            return white;
-        } else {
-            return black;
-        }
-    }
+          {/* Stats */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-zinc-900 p-4 rounded-xl border border-orange-500/20">
+              <p className="text-sm">Commits</p>
+              <h3 className="text-2xl text-orange-500">128</h3>
+            </div>
+            <div className="bg-zinc-900 p-4 rounded-xl border border-orange-500/20">
+              <p className="text-sm">Repos</p>
+              <h3 className="text-2xl text-orange-500">12</h3>
+            </div>
+          </div>
 
-    /* Main interface */
-    *, *:before, *:after {
-        box-shadow: none !important;
-    }
-
-    #header {
-        color: text-1 !important;
-        background: bg-1 !important;
-    }
-
-    .section-editor {
-        color: text-1 !important;
-        background: bg-1 !important;
-    }
-
-    a {
-        color: text-1 !important;
-
-        &:hover {
-            color: highlight !important;
-        }
-    }
-
-    input, select {
-        background: bg-1 !important;
-        color: text-1 !important;
-        border: 1px solid text-1 !important;
-        border-radius: border-radius !important;
-
-        &:focus {
-            border-color: highlight !important;
-        }
-
-        &.slider {
-            border: none !important;
-            background: none !important;
-        }
-
-        optgroup {
-            background: bg-2 !important;
-            border-bottom: 1px solid text-1 !important;
-        }
-    }
-
-    button {
-        background: bg-1 !important;
-        color: text-1 !important;
-        border-radius: border-radius !important;
-
-        &:hover {
-            color: highlight !important;
-            border-color: highlight !important;
-            cursor: pointer !important;
-        }
-    }
-
-    .dropdown-content {
-        border: 1px solid text-1 !important;
-        background: bg-1 !important;
-
-        a:hover {
-            color: highlight !important;
-            background: bg-1 !important;
-        }
-    }
-
-    .svg-icon, .svg-icon.checked, .select-arrow {
-        fill: text-1 !important;
-
-        &:hover {
-            fill: highlight !important;
-        }
-    }
-
-    #filters {
-        .filter-selection:hover, label:hover {
-            background: bg-1 !important;
-        }
-
-        #filters-stats {
-            if (!dark(highlight)) {
-                color: bg-1 !important;
-            } else {
-                color: text-1 !important;
-            }
-
-            background: highlight !important;
-        }
-    }
-
-    #stylus-options #options-title, #stylus-popup #installed {
-        background: bg-1 !important;
-        color: text-1 !important;
-    }
-
-    #stylus-options #options, #stylus-popup {
-        background: bg-2 !important;
-        color: text-1 !important;
-    }
-
-    #stylus-manage {
-        background: bg-1 !important;
-        color: text-1 !important;
-    }
-
-    .update:after, .up-to-date:after, .updated:after, .update-note:after {
-        background: bg-2 !important;
-        border-color: text-1 !important;
-    }
-
-    .lint-report-container table {
-        color: text-1 !important;
-    }
-
-    .search-result {
-        background: bg-1 !important;
-
-        .search-result-meta {
-            background: bg-2 !important;
-        }
-    }
-
-    #message-box {
-        #message-box-title {
-            color: text-1 !important;
-            background: bg-1 !important;
-            border: 1px solid text-1 !important;
-        }
-
-        #message-box-contents {
-            color: text-1 !important;
-            background: bg-1 !important;
-            border-left: 1px solid text-1 !important;
-            border-right: 1px solid text-1 !important;
-
-            mark {
-                border-color: text-2 !important;
-                background: bg-2 !important;
-            }
-        }
-
-        #message-box-buttons {
-            color: text-1 !important;
-            background: bg-1 !important;
-            border: 1px solid text-1 !important;
-            border-top: 0 !important;
-        }
-    }
-
-    #help-popup {
-        background: bg-1 !important;
-        border: 1px solid text-1 !important;
-
-        .title {
-            color: text-1 !important;
-            background: bg-1 !important;
-            border-bottom: 1px solid text-1 !important;
-        }
-
-        .contents {
-            color: text-1 !important;
-
-            .can-close-on-esc {
-                padding: 2px !important;
-            }
-
-            .keymap-list {
-                color: text-1 !important;
-            }
-        }
-    }
-
-    .menu-items-wrapper {
-        background: bg-1 !important;
-        border: 1px solid text-1 !important;
-
-        .menu-title {
-            border-bottom: 1px solid text-1 !important;
-        }
-    }
-
-    .onoffswitch {
-        .slider + span:before {
-            background: text-2 !important;
-        }
-
-        .slider:checked + span:before {
-            background: highlight !important;
-        }
-    }
-
-    #installed {
-        .entry {
-            .style-name:hover:before {
-                background: linear-gradient(to right, hsla(hue(highlight), 79.6%, 44.1%, 0.2), hsla(hue(highlight), 20%, 10%, 0.05) 50%, transparent);
-            }
-
-            &.usercss {
-                .style-name-link:after {
-                    if (!dark(highlight)) {
-                        color: bg-1 !important;
-                    } else {
-                        color: text-1 !important;
-                    }
-
-                    background: highlight !important;
-                }
-            }
-        }
-    }
-
-    .all-styles-hidden-by-filters:before, .all-styles-hidden-by-filters:after {
-        color: text-1 !important;
-    }
-    
-    .install {
-        border: 1px solid highlight !important;
-        text-shadow: none !important;
-    }
-    
-    .install::before, .install:active::before, .install:active:hover::before{
-        background: bg-1 !important;
-        border: none !important;
-    }
-
-    /* Code editor */
-    .CodeMirror {
-        background: bg-1 !important;
-        color: text-1 !important;
-        line-height: 1.4em !important;
-        font-size: 14px !important;
-
-        .CodeMirror-line {
-            padding-left: 10px !important;
-        }
-
-        .CodeMirror-gutters {
-            background: bg-1 !important;
-            border-color: highlight !important;
-        }
-
-        .CodeMirror-selected, .CodeMirror-activeline-background {
-            color: bg-1 !important;
-            background: bg-2 !important;
-        }
-
-        .CodeMirror-cursor {
-            border-color: text-1 !important;
-        }
-
-        .cm-meta {
-            color: text-1 !important;
-        }
-
-        .cm-comment {
-            color: text-2 !important;
-        }
-
-        .cm-matchhighlight {
-            color: getForegroundColor(highlight) !important;
-            background: highlight !important;
-        }
-    }
-
-    #search-replace-dialog {
-        color: text-1 !important;
-        background: bg-1 !important;
-
-        .CodeMirror-search-field {
-            color: text-1 !important;
-        }
-    }
+          {/* Activity */}
+          <div className="bg-zinc-900 rounded-2xl p-5 border border-orange-500/20">
+            <h2 className="text-lg mb-3 text-orange-300">Recent Activity</h2>
+            <ul className="text-sm space-y-2 opacity-80">
+              <li>✔ Fixed bug in auth system</li>
+              <li>✔ Added new dashboard UI</li>
+              <li>✔ Updated README</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
